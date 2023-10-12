@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Traffic Light Control</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> <!-- Include Font Awesome CSS -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0; /* Add a background color */
+    }
+
+    h1 {
+      color: #333;
+      margin-top: 20px; /* Add some top margin */
+    }
+
+    form {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f4f4f4;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #008CBA;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005C87;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container"> <!-- Add Bootstrap container for layout -->
+    <h1>Traffic Light Control</h1>
+
+    <form action="/control" method="post">
+      <div class="form-group"> <!-- Add Bootstrap form-group class -->
+        <label for="light"><i class="fas fa-traffic-light"></i> Select Traffic Light:</label> <!-- Font Awesome icon -->
+        <select class="form-control" name="light" id="light">
+          <option value="1">Traffic Light 1</option>
+          <option value="2">Traffic Light 2</option>
+        </select>
+      </div>
+
+      <div class="form-group"> <!-- Add Bootstrap form-group class -->
+        <label for="color"><i class="fas fa-paint-brush"></i> Select Color:</label> <!-- Font Awesome icon -->
+        <select class="form-control" name="color" id="color">
+          <option value="RED">Red</option>
+          <option value="YELLOW">Yellow</option>
+          <option value="GREEN">Green</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Set Color</button> <!-- Use Font Awesome icons in the button -->
+    </form>
+  </div>
+</body>
+
+</html>
